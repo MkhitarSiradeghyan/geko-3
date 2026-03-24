@@ -331,6 +331,7 @@ button {
 
 .brands {
     padding: 100px 0;
+    overflow: hidden;
 }
 
 .brands_wrap {
