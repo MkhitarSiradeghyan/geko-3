@@ -224,7 +224,7 @@ button {
 .hero {
     height: 100vh;
     max-height: 900px;
-    background: linear-gradient(90deg, var(--color-white), transparent) no-repeat, url("./img/hero.png") no-repeat right center / 50%;
+    background:  #fffd url("./img/hero.png") no-repeat right center / 50%;
 }
 
 .hero_wrap {
@@ -395,7 +395,6 @@ button {
     flex-wrap: wrap;
     align-items: center;
     gap: 50px;
-    translate: 10%;
 }
 
 .brands_logo {
@@ -409,8 +408,8 @@ button {
 }
 
 .why {
-    padding: 100px;
-    background: url("./img/about.png") no-repeat center left / auto 70%;
+    padding: 100px 0;
+    background: #fffd url("./img/about.png") no-repeat center left / auto 70%;
 }
 
 .why_wrap {
@@ -422,7 +421,8 @@ button {
 .why_content {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
+    max-width: 900px;
     gap: 50px;
 }
 
@@ -656,8 +656,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 50%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 800px;
     gap: 20px;
 }
 
@@ -665,7 +665,7 @@ button {
     font-weight: 600;
     font-size: var(--font-size-8);
     color: var(--color-neutral-1);
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .app_highlight {
@@ -680,6 +680,7 @@ button {
 }
 
 .app_market {
+    width: 100%;
     display: flex;
     gap: 12px;
 }
@@ -798,15 +799,7 @@ button {
     font-size: var(--font-size-1);
 }
 
-@keyframes logos {
-    0% {
-        translate: 10%;
-    }
 
-    100% {
-        translate: -50%;
-    }
-}
 
 @media screen and (max-width: 920px) {
     .header_nav {
@@ -843,6 +836,7 @@ button {
 
     .hero {
         background-size: 80%;
+        background-blend-mode: lighten;
         height: auto;
     }
 
@@ -861,16 +855,56 @@ button {
         border: none;
     }
 
-    .how {
-    }
+   
     .how_group {
         flex-direction: column;
     }
+    
+    .why {
+    background-position: center;
+        background-blend-mode: lighten;
+    }
+    .why_wrap {
+        justify-content: center;
+    }
+    .why_hgroup {
+        align-items: center;
+        text-align: center;
+    }
+    .rent_group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .app_wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+    .app_market {
+        justify-content: center;
+    }
+    .app_img{
+        width: 50%;
 
+    }
+    .app_img > img {
+        position: relative;
+    }
+    .footer_top {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer_nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 568px) {
     .hero_form {
+        grid-template-columns: 1fr;
+    }
+    .rent_group {
         grid-template-columns: 1fr;
     }
 }
