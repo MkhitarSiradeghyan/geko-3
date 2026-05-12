@@ -1,0 +1,20 @@
+input {
+    font-size: 32px;
+    padding: 0.5em;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    font-size: 32px;
+}
+
+.plus {
+    color: #0f0;
+}
+
+.minus {
+    color: #f00;
+}
